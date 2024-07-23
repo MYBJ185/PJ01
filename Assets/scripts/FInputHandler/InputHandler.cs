@@ -1,92 +1,60 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace FInputHandler
-{ 
-    public class InputHandler : MonoBehaviour
 {
-    private Dictionary<KeyCode, string> keyToAction = new Dictionary<KeyCode, string>();
-    private Dictionary<string, ActionType> actionType = new Dictionary<string, ActionType>();
-    private Queue<string> bufferedActions = new Queue<string>();
-
-    void Start()
+    public class InputHandler : MonoBehaviour
     {
-        // 设置按键映射和动作类型
-        SetKeyMapping(KeyCode.W, "Move_Forward", ActionType.Instant);
-        SetKeyMapping(KeyCode.J, "Jump", ActionType.Instant);
-        SetKeyMapping(KeyCode.C, "Combo_Attack", ActionType.Buffered);
-    }
+        private PlayerInput _playerInput;
 
-    void Update()
-    {
-        // 处理即时输入
-        foreach (var key in keyToAction.Keys)
+        [SerializeField] private Vector2 axes;
+        private Vector2 Axes => axes = _playerInput.GamePlay.Axes.ReadValue<Vector2>();
+
+        [SerializeField] private bool jump;
+        public bool Jump => jump = _playerInput.GamePlay.Jump.WasPressedThisFrame();
+
+        [SerializeField] private bool stopJump;
+        public bool StopJump => stopJump = _playerInput.GamePlay.Jump.WasReleasedThisFrame();
+
+        [SerializeField] private bool move;
+        public bool Move => move = AxisX != 0f;
+
+        [SerializeField] private float axisX;
+        private float AxisX => axisX = Axes.x;
+
+        private void Awake() 
         {
-            if (Input.GetKeyDown(key))
-            {
-                HandleInput(key);
-            }
+            _playerInput = new PlayerInput();
+
+            // 解除现有的 Jump 绑定
+            var jumpAction = _playerInput.GamePlay.Jump;
+            jumpAction.ApplyBindingOverride("");
+            jumpAction.AddBinding("<Keyboard>/j");
+            jumpAction.AddBinding("<XInputController>/buttonEast");
+
+            // 修改键盘上下左右的绑定为
+            //var axesAction = _playerInput.GamePlay.Axes;
+            //axesAction.ApplyBindingOverride("");
+            //axesAction.AddCompositeBinding("2DVector")
+            //    .With("Up", "<Keyboard>/e")
+            //    .With("Down", "<Keyboard>/d")
+            //    .With("Left", "<Keyboard>/s")
+            //    .With("Right", "<Keyboard>/f");
+
+            // 修改Xbox手柄的上下左右绑定为十字键
+            //axesAction.AddCompositeBinding("2DVector")
+            //    .With("Up", "<XInputController>/dpad/up")
+            //    .With("Down", "<XInputController>/dpad/down")
+            //    .With("Left", "<XInputController>/dpad/left")
+            //    .With("Right", "<XInputController>/dpad/right");
+
+            EnableGameplayInputs();
         }
 
-        // 处理缓冲输入
-        ProcessBufferedActions();
-    }
-
-    public void SetKeyMapping(KeyCode key, string action, ActionType actionType)
-    {
-        keyToAction[key] = action;
-        this.actionType[action] = actionType;
-    }
-
-    private void HandleInput(KeyCode key)
-    {
-        if (keyToAction.ContainsKey(key))
+        private void EnableGameplayInputs()
         {
-            string action = keyToAction[key];
-            ActionType actionType = this.actionType[action];
-
-            if (actionType == ActionType.Instant)
-            {
-                ProcessInstantAction(action);
-            }
-            else if (actionType == ActionType.Buffered)
-            {
-                bufferedActions.Enqueue(action);
-            }
+            _playerInput.GamePlay.Enable();
+            //Cursor.lockState = CursorLockMode.Locked;
         }
-    }
-
-    private void ProcessInstantAction(string action)
-    {
-        ExecuteAction(action);
-    }
-
-    private void ProcessBufferedActions()
-    {
-        if (CanExecuteBufferedAction() && bufferedActions.Count > 0)
-        {
-            string action = bufferedActions.Dequeue();
-            ExecuteAction(action);
-        }
-    }
-
-    private void ExecuteAction(string action)
-    {
-        // 根据动作名称执行对应的逻辑
-        Debug.Log($"Executing action: {action}");
-    }
-
-    private bool CanExecuteBufferedAction()
-    {
-        // 检查当前是否可以执行缓冲动作
-        return true;
-    }
-
-    public void ClearBufferedActions()
-    {
-        bufferedActions.Clear();
     }
 }
-}
-
-
