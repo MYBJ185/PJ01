@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace FInputHandler
+namespace Input
 {
     public class InputHandler : MonoBehaviour
     {

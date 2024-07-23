@@ -1,5 +1,5 @@
 
-namespace FInputHandler
+namespace Input
 {
     public enum ActionType
     {
