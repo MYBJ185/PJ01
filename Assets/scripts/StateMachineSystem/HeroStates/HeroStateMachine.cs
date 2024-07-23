@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Characters.Hero;
 using Input;
 using UnityEngine;
 using StateMachine = StateMachineSystem.Base.StateMachine;
@@ -14,14 +15,17 @@ namespace StateMachineSystem.HeroStates
         private Animator _animator;
         
         private InputHandler _input;
+        
+        private HeroController _heroController;
         private void Awake()
         {
             _animator = GetComponentInChildren<Animator>();
             StateTable = new Dictionary<Type, IState>(states.Length);
             _input = GetComponent<InputHandler>();
+            _heroController = GetComponent<HeroController>();
             foreach (var state in states)
             {
-                state.Initialize(this, _input, _animator);
+                state.Initialize(this, _input, _heroController, _animator);
                 StateTable.Add(state.GetType(), state);
             }
         }

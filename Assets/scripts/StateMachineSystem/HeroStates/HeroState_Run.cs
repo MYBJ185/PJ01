@@ -6,6 +6,7 @@ namespace StateMachineSystem.HeroStates
     [CreateAssetMenu(menuName = "Data/StateMachine/HeroState/Run", fileName = "HeroState_Run")]
     public class HeroStateRun : HeroState
     {
+        [SerializeField] private float runSpeed = 5f;
         public override void Enter()
         {
             base.Enter();
@@ -19,6 +20,11 @@ namespace StateMachineSystem.HeroStates
             {
                 StateMachine.SwitchState(typeof(HeroStateIdle));
             }
+        }
+
+        public override void PhysicUpdate()
+        {
+            HeroController.Move(runSpeed);
         }
     }
 }

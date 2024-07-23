@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf24a7a919449c5bb74d77741e96dab, type: 3}
   m_Name: HeroState_Run
   m_EditorClassIdentifier: 
+  runSpeed: 5

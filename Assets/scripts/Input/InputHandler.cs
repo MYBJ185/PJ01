@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,10 +18,12 @@ namespace Input
         public bool StopJump => stopJump = _playerInput.GamePlay.Jump.WasReleasedThisFrame();
 
         [SerializeField] private bool move;
-        public bool Move => move = AxisX != 0f;
+        public bool Move => move = AxisX != 0f || AxisY != 0f;
 
         [SerializeField] private float axisX;
-        private float AxisX => axisX = Axes.x;
+        [SerializeField] private float axisY;
+        public float AxisX => axisX = Axes.x;
+        public float AxisY => axisY = Axes.y;
 
         private void Awake() 
         {
@@ -51,7 +54,12 @@ namespace Input
             EnableGameplayInputs();
         }
 
-        private void EnableGameplayInputs()
+        public void Update()
+        {
+            Debug.Log("AxisX: " + AxisX);
+        }
+
+        public void EnableGameplayInputs()
         {
             _playerInput.GamePlay.Enable();
             //Cursor.lockState = CursorLockMode.Locked;

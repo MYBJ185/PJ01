@@ -14,7 +14,6 @@ namespace StateMachineSystem.HeroStates
         
         public override void LogicUpdate()
         {
-            base.LogicUpdate();
             if (Input.Move)
             {
                 StateMachine.SwitchState(typeof(HeroStateRun));
