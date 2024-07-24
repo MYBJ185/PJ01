@@ -8,8 +8,7 @@ namespace StateMachineSystem.Base
     public class StateMachine : MonoBehaviour
     {
         private IState _currentState;
-        protected Dictionary<Type, IState> StateTable;
-        
+        protected Dictionary<System.Type, IState> StateTable;
         private void Update()
         {
             _currentState.LogicUpdate();
@@ -24,11 +23,9 @@ namespace StateMachineSystem.Base
         {
             _currentState = newState;
             _currentState.Enter();
-            
-            var debugConsoleInstance = DebugConsole.Instance;
-            if (debugConsoleInstance)
+            if (DebugConsole.Instance)
             {
-                debugConsoleInstance.Log(_currentState.StateName, LogLevel.Info);
+                DebugConsole.Instance.Log("角色状态切换:" + _currentState.StateName, LogLevel.Info);
             }
         }
         
@@ -38,7 +35,7 @@ namespace StateMachineSystem.Base
             SwitchOn(newState);
         }
         
-        public void SwitchState(Type newState)
+        public void SwitchState(System.Type newState)
         {
             _currentState?.Exit();
             SwitchOn(StateTable[newState]);

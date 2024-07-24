@@ -16,7 +16,7 @@ namespace Tool.Debug
         {
             get
             {
-                if (_instance == null)
+                if (!_instance)
                 {
                     UnityEngine.Debug.LogError("DebugConsole instance is not initialized.");
                 }
@@ -45,7 +45,7 @@ namespace Tool.Debug
 
         public void Log(string message, LogLevel level)
         {
-            if (_instance)
+            if (!_instance)
             {
                 UnityEngine.Debug.LogError("DebugConsole instance is not initialized.");
                 return;
