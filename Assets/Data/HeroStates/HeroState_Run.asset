@@ -1,18 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf24a7a919449c5bb74d77741e96dab, type: 3}
-  m_Name: HeroState_Run
-  m_EditorClassIdentifier: 
-  stateName: Running
-  transitionDuration: 0.1
-  runSpeed: 2
-  acceleration: 10
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf74efe73a8f319ceb5fc8c504159d5a97b794fbc483042f10759c8abe738c60
+size 482
