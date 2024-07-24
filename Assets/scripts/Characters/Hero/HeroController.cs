@@ -1,18 +1,23 @@
 using System;
 using Input;
 using UnityEngine;
-
+using CharacterGroundDetector = Characters.Characters.CharacterGroundDetector;
 namespace Characters.Hero
 {
     public class HeroController : MonoBehaviour
     {
+        private CharacterGroundDetector _groundDetector;
         private InputHandler _inputHandler;
         private Rigidbody _rigidbody;
+        public float MoveSpeed => Mathf.Abs(_rigidbody.linearVelocity.x);
         
+        public bool IsGround => _groundDetector.IsGrounded;
+        public bool IsFalling => _rigidbody.linearVelocity.y < 0 && _groundDetector.IsGrounded == false;
         private void Awake()
         {
             _inputHandler = GetComponent<InputHandler>();
             _rigidbody = GetComponent<Rigidbody>();
+            _groundDetector = GetComponent<CharacterGroundDetector>();
         }
 
         private void Start()
@@ -21,8 +26,14 @@ namespace Characters.Hero
         }
 
         public void Move(float speed)
-        {
-            SetVelocityX(speed * _inputHandler.AxisX);
+        {   
+            var normalizedSpeed = (_inputHandler.AxisX + 0.1f) / Math.Abs(_inputHandler.AxisX + 0.1f);
+            
+            if (_inputHandler.Move)
+            {
+                transform.localScale = new Vector3(normalizedSpeed, 1, 1);
+            }
+            SetVelocityX(speed * normalizedSpeed);
         }
         
         public void SetVelocity(Vector3 velocity)

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cf24a7a919449c5bb74d77741e96dab, type: 3}
-  m_Name: HeroState_Run
+  m_Script: {fileID: 11500000, guid: 96248dca81474411a247bf5241ea5733, type: 3}
+  m_Name: HeroState_Walk
   m_EditorClassIdentifier: 
-  stateName: Run
+  stateName: Walk
   transitionDuration: 0.1
-  runSpeed: 5
-  acceration: 10
+  runSpeed: 2.5
+  acceration: 5

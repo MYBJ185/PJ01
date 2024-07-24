@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9cbf1a2a4e64cbe84eb30c746405613, type: 3}
   m_Name: HeroState_Idle
   m_EditorClassIdentifier: 
+  stateName: Idle
+  deceration: 20

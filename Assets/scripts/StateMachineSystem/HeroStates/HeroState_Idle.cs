@@ -1,23 +1,31 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace StateMachineSystem.HeroStates
 {
     [CreateAssetMenu(menuName = "Data/StateMachine/HeroState/Idle", fileName = "HeroState_Idle")]
     public class HeroStateIdle : HeroState
     {
+        [SerializeField] private float deceleration = 20f;
+
         public override void Enter()
         {
             base.Enter();
-            Animator.Play("Idle");
+            CurrentSpeed = HeroController.MoveSpeed;
         }
-        
+
         public override void LogicUpdate()
         {
-            if (Input.Move)
+            if (Mathf.Abs(Input.AxisX) >= 0.3)
             {
-                StateMachine.SwitchState(typeof(HeroStateRun));
+                StateMachine.SwitchState(typeof(HeroStateWalk));
             }
+
+            CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, 0, deceleration * Time.deltaTime);
+        }
+
+        public override void PhysicUpdate()
+        {
+            HeroController.SetVelocityX(CurrentSpeed * HeroController.transform.localScale.x);
         }
     }
 }
