@@ -21,11 +21,18 @@ namespace StateMachineSystem.HeroStates
             {
                 StateMachine.SwitchState(typeof(HeroStateRun));
             }
-            else if (!Input.Move)
+            if (!Input.Move)
             {
                 StateMachine.SwitchState(typeof(HeroStateIdle));
             }
-            
+            if (Input.Jump)
+            {
+                StateMachine.SwitchState(typeof(HeroStateJumpUp));
+            }
+            if(!HeroController.IsGrounded)
+            {
+                StateMachine.SwitchState(typeof(HeroStateFall));
+            }
             CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, walkSpeed,acceleration * Time.deltaTime);
         }
 

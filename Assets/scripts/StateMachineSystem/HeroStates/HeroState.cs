@@ -15,7 +15,7 @@ namespace StateMachineSystem.HeroStates
         private float _stateStartTime;
         private int _stateHash;
         private Animator _animator;
-        private float StateDuration => Time.time - _stateStartTime;
+        protected float StateDuration => Time.time - _stateStartTime;
         
         
         protected float CurrentSpeed;

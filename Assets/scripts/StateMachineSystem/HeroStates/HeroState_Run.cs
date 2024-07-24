@@ -20,7 +20,14 @@ namespace StateMachineSystem.HeroStates
             {
                 StateMachine.SwitchState(typeof(HeroStateIdle));
             }
-            
+            if (Input.Jump)
+            {
+                StateMachine.SwitchState(typeof(HeroStateJumpUp));
+            }
+            if(!HeroController.IsGrounded)
+            {
+                StateMachine.SwitchState(typeof(HeroStateFall));
+            }
             CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, runSpeed,acceleration * Time.deltaTime);
         }
 

@@ -11,13 +11,13 @@ namespace Characters.Hero
         private Rigidbody _rigidbody;
         public float MoveSpeed => Mathf.Abs(_rigidbody.linearVelocity.x);
         
-        public bool IsGround => _groundDetector.IsGrounded;
+        public bool IsGrounded => _groundDetector.IsGrounded;
         public bool IsFalling => _rigidbody.linearVelocity.y < 0 && _groundDetector.IsGrounded == false;
         private void Awake()
         {
             _inputHandler = GetComponent<InputHandler>();
             _rigidbody = GetComponent<Rigidbody>();
-            _groundDetector = GetComponent<CharacterGroundDetector>();
+            _groundDetector = GetComponentInChildren<CharacterGroundDetector>();
         }
 
         private void Start()
@@ -27,7 +27,7 @@ namespace Characters.Hero
 
         public void Move(float speed)
         {   
-            var normalizedSpeed = (_inputHandler.AxisX + 0.1f) / Math.Abs(_inputHandler.AxisX + 0.1f);
+            var normalizedSpeed = (_inputHandler.AxisX) / Math.Abs(_inputHandler.AxisX + 0.01f);
             
             if (_inputHandler.Move)
             {

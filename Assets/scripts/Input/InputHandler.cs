@@ -30,10 +30,10 @@ namespace Input
             _playerInput = new PlayerInput();
 
             // 解除现有的 Jump 绑定
-            var jumpAction = _playerInput.GamePlay.Jump;
-            jumpAction.ApplyBindingOverride("");
-            jumpAction.AddBinding("<Keyboard>/j");
-            jumpAction.AddBinding("<XInputController>/buttonEast");
+            //var jumpAction = _playerInput.GamePlay.Jump;
+            //jumpAction.ApplyBindingOverride("");
+            //jumpAction.AddBinding("<Keyboard>/j");
+            //jumpAction.AddBinding("<XInputController>/buttonEast");
 
             // 修改键盘上下左右的绑定为
             //var axesAction = _playerInput.GamePlay.Axes;
