@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae112902be54fd68340d6450bc08593, type: 3}
   m_Name: HeroState_Fall
   m_EditorClassIdentifier: 
-  stateName: Fall
+  stateName: Falling
   transitionDuration: 0.1
   fallSpeed:
     serializedVersion: 2
@@ -38,5 +38,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  moveSpeed: 5
-  fallForce: 3
+  moveSpeed: 2
+  fallForce: 8

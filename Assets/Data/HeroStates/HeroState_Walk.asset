@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96248dca81474411a247bf5241ea5733, type: 3}
   m_Name: HeroState_Walk
   m_EditorClassIdentifier: 
-  stateName: Walk
+  stateName: Walking
   transitionDuration: 0.1
-  runSpeed: 2.5
-  acceration: 5
+  walkSpeed: 1
+  acceleration: 5

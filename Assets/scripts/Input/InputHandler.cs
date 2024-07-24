@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Input
 {
@@ -53,12 +51,7 @@ namespace Input
 
             EnableGameplayInputs();
         }
-
-        public void Update()
-        {
-            Debug.Log("AxisX: " + AxisX);
-        }
-
+        
         public void EnableGameplayInputs()
         {
             _playerInput.GamePlay.Enable();

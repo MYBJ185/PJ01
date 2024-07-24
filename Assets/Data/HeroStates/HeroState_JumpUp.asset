@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79bccafca32b40eabac0a9b15a8be12a, type: 3}
   m_Name: HeroState_JumpUp
   m_EditorClassIdentifier: 
-  stateName: jump
+  stateName: Jumping
   transitionDuration: 0.1
   jumpSpeed:
     serializedVersion: 2
@@ -38,5 +38,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpForce: 3
-  moveSpeed: 5
+  jumpForce: 2
+  moveSpeed: 2

@@ -17,7 +17,7 @@ namespace StateMachineSystem.HeroStates
         public override void LogicUpdate()
         {
             base.LogicUpdate();
-            if (Mathf.Abs(Input.AxisX) >= 0.8)
+            if (Mathf.Abs(Input.AxisX) >= 0.8 && IsAnimationFinished)
             {
                 StateMachine.SwitchState(typeof(HeroStateRun));
             }

@@ -18,11 +18,11 @@ namespace StateMachineSystem.HeroStates
             {
                 StateMachine.SwitchState(typeof(HeroStateJumpUp));
             }
-            if (Input.Move && StateDuration < stiffTime)
-            {
-                StateMachine.SwitchState(typeof(HeroStateWalk));
-            }
-            if (IsAnimationFinished)
+            //if (Input.Move && StateDuration > stiffTime)
+            //{
+            //    StateMachine.SwitchState(typeof(HeroStateWalk));
+            //}
+            if (StateDuration > stiffTime)
             {
                 StateMachine.SwitchState(typeof(HeroStateIdle));
             }

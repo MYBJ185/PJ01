@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b4c0d56a87d46a7b29605e63912d76f, type: 3}
   m_Name: HeroState_AirJump
   m_EditorClassIdentifier: 
-  stateName: jump
+  stateName: DoubleJumping
   transitionDuration: 0.1
   jumpSpeed:
     serializedVersion: 2
@@ -27,7 +27,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1
+      time: 2
       value: 0
       inSlope: 0
       outSlope: 0
@@ -38,5 +38,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jumpForce: 2
-  moveSpeed: 5
+  jumpForce: 1.5
+  moveSpeed: 2

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d8606373cb34efe8dc84c6c3d33c55e, type: 3}
   m_Name: HeroState_Land
   m_EditorClassIdentifier: 
-  stateName: Hurt
+  stateName: FirstLand
   transitionDuration: 0.1
-  stiffTime: 0.3
+  stiffTime: 0.5

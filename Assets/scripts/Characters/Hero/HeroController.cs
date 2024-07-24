@@ -27,14 +27,15 @@ namespace Characters.Hero
         }
 
         public void Move(float speed)
-        {   
-            var normalizedSpeed = (_inputHandler.AxisX) / Math.Abs(_inputHandler.AxisX + 0.01f);
-            
+        {
+            var normalizedSpeed = Mathf.Sign(_inputHandler.AxisX);
+            var inputMagnitude = Mathf.Abs(_inputHandler.AxisX);
+
             if (_inputHandler.Move)
             {
                 transform.localScale = new Vector3(normalizedSpeed, 1, 1);
             }
-            SetVelocityX(speed * normalizedSpeed);
+            SetVelocityX(speed * inputMagnitude * normalizedSpeed);
         }
         
         public void SetVelocity(Vector3 velocity)
