@@ -9,6 +9,7 @@ namespace StateMachineSystem.HeroStates
         public override void Enter()
         {
             base.Enter();
+            HeroController.CanAirJump = true;
             HeroController.SetVelocity(Vector3.zero);
         }
         public override void LogicUpdate()
@@ -17,11 +18,7 @@ namespace StateMachineSystem.HeroStates
             {
                 StateMachine.SwitchState(typeof(HeroStateJumpUp));
             }
-            if(StateDuration < stiffTime)
-            {
-                return;
-            }
-            if (Input.Move)
+            if (Input.Move && StateDuration < stiffTime)
             {
                 StateMachine.SwitchState(typeof(HeroStateWalk));
             }

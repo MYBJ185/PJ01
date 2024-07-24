@@ -9,6 +9,7 @@ namespace Characters.Hero
         private CharacterGroundDetector _groundDetector;
         private InputHandler _inputHandler;
         private Rigidbody _rigidbody;
+        public bool CanAirJump { get; set; } = true;
         public float MoveSpeed => Mathf.Abs(_rigidbody.linearVelocity.x);
         
         public bool IsGrounded => _groundDetector.IsGrounded;

@@ -14,6 +14,11 @@ namespace StateMachineSystem.HeroStates
             {
                 StateMachine.SwitchState(typeof(HeroStateLand));
             }
+
+            if (Input.Jump && HeroController.CanAirJump)
+            {
+                StateMachine.SwitchState((typeof(HeroStateAirJump)));
+            }
         }
         
         public override void PhysicUpdate()

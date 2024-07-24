@@ -1,13 +1,19 @@
 using UnityEngine;
-
 namespace StateMachineSystem.HeroStates
 {
-    [CreateAssetMenu(menuName = "Data/StateMachine/HeroState/JumpUp", fileName = "HeroState_JumpUp")]
-    public class HeroStateJumpUp : HeroState
+    [CreateAssetMenu(menuName = "Data/StateMachine/HeroState/AirJump", fileName = "HeroState_AirJump")]
+    public class HeroStateAirJump : HeroState
     {
         [SerializeField] private AnimationCurve jumpSpeed;
         [SerializeField] private float jumpForce = 10f;
         [SerializeField] private float moveSpeed = 5f;
+        
+        public override void Enter()
+        {
+            base.Enter();
+            HeroController.SetVelocityY(0);
+            HeroController.CanAirJump = false;
+        }
         public override void LogicUpdate()
         {
             if(Input.StopJump || HeroController.IsFalling)

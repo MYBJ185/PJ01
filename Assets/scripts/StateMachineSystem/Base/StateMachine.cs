@@ -7,7 +7,7 @@ namespace StateMachineSystem.Base
     public class StateMachine : MonoBehaviour
     {
         private IState _currentState;
-        public Dictionary<System.Type, IState> StateTable;
+        protected Dictionary<System.Type, IState> StateTable;
         private void Update()
         {
             _currentState.LogicUpdate();
