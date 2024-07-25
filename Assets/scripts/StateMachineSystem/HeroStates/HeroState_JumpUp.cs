@@ -8,6 +8,14 @@ namespace StateMachineSystem.HeroStates
         [SerializeField] private AnimationCurve jumpSpeed;
         [SerializeField] private float jumpForce = 10f;
         [SerializeField] private float moveSpeed = 5f;
+        
+        public override void Enter()
+        {
+            base.Enter();
+            
+            Input.HasJumpInputBuffer = false;
+            HeroController.SetVelocityX(0);
+        }
         public override void LogicUpdate()
         {
             if(Input.StopJump || HeroController.IsFalling)

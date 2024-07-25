@@ -1,3 +1,4 @@
+using Tool.Debug;
 using UnityEngine;
 
 namespace StateMachineSystem.HeroStates
@@ -6,11 +7,12 @@ namespace StateMachineSystem.HeroStates
     public class HeroStateIdle : HeroState
     {
         [SerializeField] private float deceleration = 20f;
-
+        private float _previousAxisX;
         public override void Enter()
         {
             base.Enter();
             CurrentSpeed = HeroController.MoveSpeed;
+            _previousAxisX = Input.AxisX;
         }
 
         public override void LogicUpdate()
@@ -25,8 +27,14 @@ namespace StateMachineSystem.HeroStates
             }
             if(!HeroController.IsGrounded)
             {
-                StateMachine.SwitchState(typeof(HeroStateFall));
+                StateMachine.SwitchState(typeof(HeroStateCoyoteTime));
             }
+            if (!Mathf.Approximately(Mathf.Sign(Input.AxisX), Mathf.Sign(_previousAxisX)))
+            {
+                //DebugConsole.Instance.Log("Direction changed", LogLevel.Info);
+            }
+
+            _previousAxisX = Input.AxisX;
             CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, 0, deceleration * Time.deltaTime);
         }
 

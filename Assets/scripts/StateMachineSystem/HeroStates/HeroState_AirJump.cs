@@ -16,7 +16,7 @@ namespace StateMachineSystem.HeroStates
         }
         public override void LogicUpdate()
         {
-            if(Input.StopJump || HeroController.IsFalling)
+            if( HeroController.IsFalling)
             {
                 StateMachine.SwitchState(typeof(HeroStateFall));
             }

@@ -5,7 +5,7 @@ namespace StateMachineSystem.HeroStates
     [CreateAssetMenu(menuName = "Data/StateMachine/HeroState/Land", fileName = "HeroState_Land")]
     public class HeroStateLand : HeroState
     {
-        [SerializeField] private float stiffTime = 0.5f;
+        [SerializeField] private float stiffTime = 0.1f;
         public override void Enter()
         {
             base.Enter();
@@ -14,7 +14,7 @@ namespace StateMachineSystem.HeroStates
         }
         public override void LogicUpdate()
         {
-            if (Input.Jump)
+            if (Input.HasJumpInputBuffer || Input.Jump)
             {
                 StateMachine.SwitchState(typeof(HeroStateJumpUp));
             }

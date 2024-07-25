@@ -1,5 +1,6 @@
+using Tool.Debug;
 using UnityEngine;
-    
+
 namespace StateMachineSystem.HeroStates
 {
     [CreateAssetMenu(menuName = "Data/StateMachine/HeroState/Run", fileName = "HeroState_Run")]
@@ -7,12 +8,15 @@ namespace StateMachineSystem.HeroStates
     {
         [SerializeField] private float runSpeed = 5f;
         [SerializeField] private float acceleration = 10f;
+        private float _previousAxisX;
+
         public override void Enter()
         {
             base.Enter();
             CurrentSpeed = HeroController.MoveSpeed;
+            _previousAxisX = Input.AxisX;
         }
-        
+
         public override void LogicUpdate()
         {
             base.LogicUpdate();
@@ -24,11 +28,18 @@ namespace StateMachineSystem.HeroStates
             {
                 StateMachine.SwitchState(typeof(HeroStateJumpUp));
             }
-            if(!HeroController.IsGrounded)
+            if (!HeroController.IsGrounded)
             {
-                StateMachine.SwitchState(typeof(HeroStateFall));
+                StateMachine.SwitchState(typeof(HeroStateCoyoteTime));
             }
-            CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, runSpeed,acceleration * Time.deltaTime);
+
+            if (!Mathf.Approximately(Mathf.Sign(Input.AxisX), Mathf.Sign(_previousAxisX)))
+            {
+                //DebugConsole.Instance.Log("Direction changed", LogLevel.Info);
+            }
+
+            _previousAxisX = Input.AxisX;
+            CurrentSpeed = Mathf.MoveTowards(CurrentSpeed, runSpeed, acceleration * Time.deltaTime);
         }
 
         public override void PhysicUpdate()
