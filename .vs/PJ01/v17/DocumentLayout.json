@@ -1,0 +1,158 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Dev\\LNZN\\PJ01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|d:\\dev\\lnzn\\pj01\\assets\\scripts\\statemachinesystem\\herostates\\herostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachinesystem\\herostates\\herostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|d:\\dev\\lnzn\\pj01\\assets\\scripts\\input\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\input\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|D:\\Dev\\LNZN\\PJ01\\assets\\scripts\\input\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\input\\playerinput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|D:\\Dev\\LNZN\\PJ01\\assets\\scripts\\characters\\characters\\charactergrounddetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characters\\characters\\charactergrounddetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|D:\\Dev\\LNZN\\PJ01\\assets\\scripts\\characters\\hero\\herocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\characters\\hero\\herocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|D:\\Dev\\LNZN\\PJ01\\assets\\scripts\\statemachinesystem\\herostates\\herostate_coyotetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachinesystem\\herostates\\herostate_coyotetime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|D:\\Dev\\LNZN\\PJ01\\assets\\scripts\\camera\\verticalfollowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera\\verticalfollowcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|D:\\Dev\\LNZN\\PJ01\\assets\\scripts\\statemachinesystem\\herostates\\herostatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7260DBF4-824C-F4AE-2D45-46C43D793056}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\statemachinesystem\\herostates\\herostatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HeroState.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState.cs",
+              "RelativeToolTip": "Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T14:35:41.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InputHandler.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Input\\InputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Input\\InputHandler.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Input\\InputHandler.cs",
+              "RelativeToolTip": "Assets\\scripts\\Input\\InputHandler.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T08:32:10.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerInput.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Input\\PlayerInput.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Input\\PlayerInput.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Input\\PlayerInput.cs",
+              "RelativeToolTip": "Assets\\scripts\\Input\\PlayerInput.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T08:32:04.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HeroState_CoyoteTime.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState_CoyoteTime.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState_CoyoteTime.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState_CoyoteTime.cs",
+              "RelativeToolTip": "Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroState_CoyoteTime.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T08:21:44.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HeroController.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Characters\\Hero\\HeroController.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Characters\\Hero\\HeroController.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Characters\\Hero\\HeroController.cs",
+              "RelativeToolTip": "Assets\\scripts\\Characters\\Hero\\HeroController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T08:02:36.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CharacterGroundDetector.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Characters\\Characters\\CharacterGroundDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Characters\\Characters\\CharacterGroundDetector.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Characters\\Characters\\CharacterGroundDetector.cs",
+              "RelativeToolTip": "Assets\\scripts\\Characters\\Characters\\CharacterGroundDetector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T08:02:31.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VerticalFollowController.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Camera\\VerticalFollowController.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Camera\\VerticalFollowController.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\Camera\\VerticalFollowController.cs",
+              "RelativeToolTip": "Assets\\scripts\\Camera\\VerticalFollowController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA+wBsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T08:02:18.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HeroStateMachine.cs",
+              "DocumentMoniker": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroStateMachine.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroStateMachine.cs",
+              "ToolTip": "D:\\Dev\\LNZN\\PJ01\\Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroStateMachine.cs",
+              "RelativeToolTip": "Assets\\scripts\\StateMachineSystem\\HeroStates\\HeroStateMachine.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-14T08:01:34.68Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

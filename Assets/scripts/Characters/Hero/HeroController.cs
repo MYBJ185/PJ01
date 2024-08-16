@@ -11,6 +11,7 @@ namespace Characters.Hero
     {
         private CharacterGroundDetector _groundDetector;
         [FormerlySerializedAs("_inputHandler")] public InputHandler inputHandler;
+        
         private Rigidbody _rigidbody;
         public bool CanAirJump { get; set; } = true;
         public float MoveSpeed => Mathf.Abs(_rigidbody.linearVelocity.x);
